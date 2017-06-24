@@ -118,7 +118,7 @@ public class BuildAndTestDecisionTree {
                     if(predictionSet.get(j).get(i).equals(tarLabel)){
                         
                         predictionCount++;
-//                        System.out.println("predictionCount Incremented: " + predictionCount);
+
                     }
                     
                 }
@@ -127,22 +127,20 @@ public class BuildAndTestDecisionTree {
             
             //Check if enough trees guessed 
             if(predictionCount >= combinationThreshold){
-//                System.out.println("Guessed: " + tarLabel);
-//                System.out.println("Example Was: " + examples.get(i).getLabel());
+
                 if(tarLabel.equals(examples.get(i).getLabel())){
-//                    System.out.println("Correct");
+
                     numCorrect++;
                 }else{
-//                    System.out.println("Incorrect");
+
                 }
             }else{
-//                System.out.println("Guessed: " + otherLabel);
-//                System.out.println("Example Was: " + examples.get(i).getLabel());
+
                 if(otherLabel.equals(examples.get(i).getLabel())){
-//                    System.out.println("Correct");
+
                     numCorrect++;
                 }else{
-//                    System.out.println("Incorrect");
+
                 }
                 
                 
@@ -313,7 +311,6 @@ public class BuildAndTestDecisionTree {
         }
 
         // Remove feature from feature list
-//        System.out.println(parent.getFeature());
         dataset.removeFeature(parent.getFeature());
         leftList.removeFeature(parent.getFeature());
         rightList.removeFeature(parent.getFeature());
@@ -861,11 +858,9 @@ class ListOfExamples extends ArrayList<Example> {
         int removeIndex = -1;
 
         // find the target feature to be removed
-//                System.out.println("features length reported = " + features.length);
         for (int i = 0; i < features.length; i++) {
 
             if (features[i].getName().equals(feature)) {
-//                System.out.println("Target found at " + i);
                 removeIndex = i;
             }
         }
@@ -906,8 +901,7 @@ class ListOfExamples extends ArrayList<Example> {
 
         
         }
-//        System.out.println("Failure point");
-//        System.out.println("Features left = " + features[0]);
+
     }
 
     // Print out a high-level description of the dataset including its features.
